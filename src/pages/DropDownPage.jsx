@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Banel from "../components/Banel";
+import Reducer from "../components/Reducer";
 
 function DropDownPage({ options }) {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -29,6 +30,7 @@ function DropDownPage({ options }) {
     <>
       <Banel onClick={handleClick}>{content} </Banel>
       {isOpened && <div>{renderOptions}</div>}
+      <Reducer />
     </>
   );
 }
